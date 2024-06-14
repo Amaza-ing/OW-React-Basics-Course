@@ -1,7 +1,7 @@
+import "./ButtonComponent.css";
+
 function ButtonComponent() {
-  return (
-    <button>Soy un botón</button>
-  )
+  return <button className="btn">Soy un botón</button>;
 }
 
 export default ButtonComponent;

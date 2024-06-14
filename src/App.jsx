@@ -6,10 +6,10 @@ function App() {
   return (
     <>
       <HeaderComponent></HeaderComponent>
-      <div>
+      <main className="main-content">
         <h1>Hola a todos!</h1>
         <ButtonComponent></ButtonComponent>
-      </div>
+      </main>
     </>
   );
 }
