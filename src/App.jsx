@@ -7,7 +7,7 @@ function App() {
     <>
       <HeaderComponent></HeaderComponent>
       <div>
-        <h1>Hola a todos!</h1>
+        <h2>Hola a todos!</h2>
         <ButtonComponent></ButtonComponent>
       </div>
     </>
