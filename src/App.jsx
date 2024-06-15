@@ -14,8 +14,9 @@ function App() {
   return (
     <>
       <HeaderComponent></HeaderComponent>
+
       <main className="main-content">
-        <h1 onClick={sayHello}>Saludos!</h1>
+        <h2 onClick={sayHello}>Saludos!</h2>
         <input type="text" onChange={handleChange} />
 
         <br />
