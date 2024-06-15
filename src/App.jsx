@@ -1,26 +1,27 @@
+import { useState } from "react";
 import "./App.css";
-import ButtonComponent from "./components/ButtonComponent";
 import HeaderComponent from "./components/HeaderComponent";
 
 function App() {
-  const sayHello = () => {
-    console.log("Hello! 😄");
-  };
+  // let number = 0;
+  const [number, setNumber] = useState(0);
+  const myPlaceholder = "Escribe aquí";
 
-  const handleChange = (e) => {
-    console.log(e.target.value);
+  const addOne = () => {
+    // number++;
+    setNumber(number + 1);
+    console.log(number);
   };
 
   return (
     <>
       <HeaderComponent></HeaderComponent>
-      <main className="main-content">
-        <h1 onClick={sayHello}>Saludos!</h1>
-        <input type="text" onChange={handleChange} />
 
-        <br />
-        <br />
-        <ButtonComponent></ButtonComponent>
+      <main className="main-content">
+        <h2>Saludos!</h2>
+        <input placeholder={myPlaceholder} type="text" />
+
+        <h2 onClick={addOne}>Number: {number}</h2>
       </main>
     </>
   );
