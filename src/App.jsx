@@ -6,6 +6,7 @@ function App() {
   return (
     <>
       <HeaderComponent></HeaderComponent>
+
       <div>
         <h2>Hola a todos!</h2>
         <ButtonComponent></ButtonComponent>
