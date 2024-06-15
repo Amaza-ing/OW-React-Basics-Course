@@ -6,6 +6,7 @@ function App() {
   // let number = 0;
   const [number, setNumber] = useState(0);
   const myPlaceholder = "Escribe aquí";
+  const [myValue, setMyValue] = useState("");
 
   const addOne = () => {
     // number++;
@@ -19,8 +20,10 @@ function App() {
 
       <main className="main-content">
         <h2>Saludos!</h2>
-        <input placeholder={myPlaceholder} type="text" />
 
+        <h3>{myValue}</h3> {/* myValue no cambia cuando cambia el input */}
+        <input type="text" placeholder={myPlaceholder} value={myValue} />
+        
         <h2 onClick={addOne}>Number: {number}</h2>
       </main>
     </>
