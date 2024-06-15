@@ -6,8 +6,9 @@ function App() {
   return (
     <>
       <HeaderComponent></HeaderComponent>
+
       <main className="main-content">
-        <h1>Hola a todos!</h1>
+        <h2>Hola a todos!</h2>
         <ButtonComponent></ButtonComponent>
       </main>
     </>
