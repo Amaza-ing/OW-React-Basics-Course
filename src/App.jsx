@@ -2,8 +2,7 @@ import "./App.css";
 import HeaderComponent from "./components/HeaderComponent";
 import Login from "./components/Login";
 import MovieList from "./components/MovieList";
-import AnimalList from "./components/AnimalList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [greetings, setGreetings] = useState("Bienvenidos a mi Web!");
@@ -16,10 +15,20 @@ function App() {
 
   const [user, setUser] = useState({});
 
+  const [showMovies, setShowMovies] = useState(true);
+
   const login = (userInfo) => {
     console.log(userInfo);
     setUser(userInfo);
   };
+
+  // useEffect(() => {
+  //   console.log("Ejecución con cada renderización del componente raíz");
+  // });
+
+  useEffect(() => {
+    console.log("Ejecución con cada cambio de la variable reactiva user");
+  }, [user]);
 
   return (
     <>
@@ -29,8 +38,10 @@ function App() {
         {user.username && <h2>Saludos {user.username}!</h2>}
         <Login handleLogin={login}></Login>
 
-        <MovieList></MovieList>
-        <AnimalList></AnimalList>
+        <button onClick={() => setShowMovies(!showMovies)}>
+          Toggle Movies
+        </button>
+        {showMovies && <MovieList></MovieList>}
       </main>
     </>
   );
