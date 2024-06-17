@@ -1,6 +1,8 @@
 import "./App.css";
 import HeaderComponent from "./components/HeaderComponent";
 import Login from "./components/Login";
+import MovieList from "./components/MovieList";
+import AnimalList from "./components/AnimalList";
 import { useState } from "react";
 
 function App() {
@@ -19,8 +21,6 @@ function App() {
     setUser(userInfo);
   };
 
-  const condition = false;
-
   return (
     <>
       <HeaderComponent greetings={greetings} links={links}></HeaderComponent>
@@ -29,14 +29,8 @@ function App() {
         {user.username && <h2>Saludos {user.username}!</h2>}
         <Login handleLogin={login}></Login>
 
-        {condition && <h2>La condición se cumple</h2>}
-        {!condition && <h2>La condición No se cumple</h2>}
-
-        {condition ? (
-          <h2>La condición se cumple</h2>
-        ) : (
-          <h2>La condición No se cumple</h2>
-        )}
+        <MovieList></MovieList>
+        <AnimalList></AnimalList>
       </main>
     </>
   );
