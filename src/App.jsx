@@ -1,7 +1,7 @@
 import "./App.css";
-import HeaderComponent from "./components/HeaderComponent";
-import Login from "./components/Login";
 import { useState } from "react";
+import HeaderComponent from "./components/HeaderComponent";
+import MemeList from "./components/MemeList";
 
 function App() {
   const [greetings, setGreetings] = useState("Bienvenidos a mi Web!");
@@ -12,20 +12,12 @@ function App() {
     contact: "Contact Us",
   };
 
-  const [user, setUser] = useState({});
-
-  const login = (userInfo) => {
-    console.log(userInfo);
-    setUser(userInfo);
-  };
-
   return (
     <>
       <HeaderComponent greetings={greetings} links={links}></HeaderComponent>
 
       <main className="main-content">
-        {user.username && <h2>Saludos {user.username}!</h2>}
-        <Login handleLogin={login}></Login>
+        <MemeList></MemeList>
       </main>
     </>
   );
