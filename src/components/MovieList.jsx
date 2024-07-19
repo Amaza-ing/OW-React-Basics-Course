@@ -23,7 +23,7 @@ function MovieList() {
     return () => {
       console.log("Ejecución cuando se destruye el componente MovieList");
     };
-  });
+  }, []);
 
   return (
     <section>
