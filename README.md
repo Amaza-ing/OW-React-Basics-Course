@@ -1,6 +1,6 @@
 <h1>Bienvenidos al curso de React desde 0</h1>
 <h3>
-  Este curso está separado por ramas, tienes cada lección y ejemplo en   cada rama.
+  Este curso está separado por ramas, tienes cada lección y ejemplo en cada rama.
 </h3>
 <h4>
   Puedes ver cada rama en este repositorio de GitHub.
